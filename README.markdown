@@ -12,6 +12,7 @@ Features:
 * If table names are unspecified, they will be derived from the file name
 * Will prefix table names to avoid collisions (it overwrites existing tables)
 * Can run under a different connection, as defined in your database.yml
+* Appends data structure to `data_loader.textile`. Put this file in version control to see the differences when your source CSV files change.
 
 ### Usage
 
@@ -31,12 +32,12 @@ Features:
 
 ### TODO
 
-* Write the column structure for each table to a text file. This file can be stored in Git, so that if the CSV files change, the diff will make it obvious what changed.
-
 * A task to clean up all these temporary tables when we're done.
 
 * Post-data load step in Migrator to NULLify 0000-00-00 dates, which is how MySQL reads empty strings in (integers would remain 0).
 
 * Broader support for Rubies, Databases, and ORM/tools for building the schema.
+
+* More options for the log file (txt vs textile, filename).
 
 * Better tests!
